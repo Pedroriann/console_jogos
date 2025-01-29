@@ -97,10 +97,10 @@ def jogar_jokenpo():
             break
  
 
-   
+   iniciar = True
 
 def console_de_jogos():
-    while True:
+    while inciar:
         print('''
 Bem-vindo ao Console de Jogos!
 1 - jogo de perguntas
@@ -108,16 +108,16 @@ Bem-vindo ao Console de Jogos!
 3 - Adivinhe o Número
 0 - Sair
         ''')
-        escolha = int(input("Escolha um jogo (1, 2 ou 3, ou 0 para sair): "))
-        if escolha == 1:
+        escolha = input("Escolha um jogo (1, 2 ou 3, ou 0 para sair): ")
+        if escolha == "1":
             jogo_perguntas()
-        elif escolha == 2:
+        elif escolha == "2":
             jogar_jokenpo()
-        elif escolha == 3:
+        elif escolha == "3":
             adivinhe_o_numero()
-        elif escolha == 0:
+        elif escolha == "0":
             print("Obrigado por jogar. Até a próxima!")
-            break
+            iniciar = False
         else:
             print("Opção inválida! Tente novamente.")
 
